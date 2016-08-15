@@ -1,6 +1,12 @@
 @mixin app-features() {
   .features {
-    font-size: 90%;
+    @include breakpoint(medium) {
+      font-size: 90%;
+      margin-bottom: rem-calc(40);
+    }
+    @include breakpoint(small down) {
+      margin-bottom: rem-calc(10);
+    }
     .row {
       @include breakpoint(medium) {
         > .columns {

@@ -1,0 +1,19 @@
+@mixin app-welcome() {
+  .welcome {
+    &-game {
+      overflow: hidden;
+      border-radius: $global-radius;
+      box-shadow: 0 2px 3px $dark-gray;
+      max-height: rem-calc(350);
+      @include breakpoint(small down) {
+        margin-bottom: rem-calc(20);
+      }
+    }
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(40);
+    }
+    @include breakpoint(small down) {
+      margin-bottom: rem-calc(10);
+    }
+  }
+}

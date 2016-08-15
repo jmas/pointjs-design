@@ -1,0 +1,128 @@
+@mixin app-nav() {
+  .nav {
+    @include clearfix;
+    background-color: $dark-grn;
+    color: $white;
+    @include breakpoint(small down) {
+      padding-top: rem-calc(5);
+      padding-bottom: rem-calc(5);
+      margin-bottom: rem-calc(30);
+    }
+    @include breakpoint(medium) {
+      padding-top: rem-calc(20);
+      padding-bottom: rem-calc(20);
+      margin-bottom: rem-calc(40);
+      &-logo {
+        margin-left: rem-calc(-20);
+      }
+    }
+    ul {
+      @include breakpoint(medium) {
+        margin: 0 rem-calc(-20);
+      }
+      padding-top: rem-calc(8);
+      > li {
+        display: inline-block;
+        vertical-align: middle;
+        .button {
+          margin-bottom: 0;
+          font-weight: 700;
+          vertical-align: middle;
+        }
+        &.active {
+          .button {
+            color: map-get($foundation-palette, primary);
+          }
+        }
+        &:after {
+          content: '•';
+          vertical-align: middle;
+          color: mix($white, $dark-grn, 25%);
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+    &-menu {
+      &-button {
+        display: none;
+      }
+      &-trigger {
+        display: none;
+      }
+      &-overlay {
+        display: none;
+      }
+    }
+    @include breakpoint(large) {
+      &-logo {
+        float: left;
+      }
+      &-menu {
+        float: right;
+      }
+    }
+    @include breakpoint(medium down) {
+      &-logo {
+        text-align: center;
+      }
+      &-menu {
+        text-align: center;
+      }
+    }
+    @include breakpoint(small down) {
+      &-logo {
+        text-align: center;
+      }
+      &-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        width: 0;
+        height: 100%;
+        background-color: $black;
+        text-align: left;
+        transition: .3s;
+        transition-property: width;
+        overflow: hidden;
+        ul > li {
+          display: block;
+          &:after {
+            display: none;
+          }
+        }
+        &-overlay {
+          display: block;
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 999;
+          width: 0;
+          height: 100%;
+          background-color: $black;
+          opacity: 0;
+          transition: .3s;
+          transition-property: opacity;
+        }
+        &-button {
+          position: absolute;
+          top: rem-calc(20);
+          left: rem-calc(20);
+          display: block;
+          cursor: pointer;
+        }
+        &-trigger:checked + & {
+          width: 70%;
+        }
+        &-trigger:checked + & + &-overlay {
+          width: 100%;
+          opacity: .5;
+        }
+      }
+    }
+  }
+}

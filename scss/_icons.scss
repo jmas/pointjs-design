@@ -1,0 +1,35 @@
+@mixin app-icons() {
+  $icons: 'youtube', 'github', 'heart', 'mobile', 'display', 'moovie', 'gears', 'speaker', 'layers', 'menu';
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    + * {
+      vertical-align: middle;
+    }
+    &-s {
+      font-size: 8px;
+    }
+    &-m {
+      font-size: 16px;
+    }
+    &-l {
+      font-size: 24px;
+    }
+    &-xl {
+      font-size: 32px;
+    }
+    &-xxl {
+      font-size: 48px;
+    }
+    @each $icon in $icons {
+      &-#{$icon} {
+        background-image: url(../etc/images/#{$icon}.png);
+      }
+    }
+  }
+}

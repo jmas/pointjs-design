@@ -1,0 +1,13 @@
+@mixin app-colors() {
+  .color {
+    &-primary {
+      color: map-get($foundation-palette, primary);
+    }
+    &-success {
+      color: map-get($foundation-palette, success);
+    }
+    &-text {
+      color: $body-font-color;
+    }
+  }
+}

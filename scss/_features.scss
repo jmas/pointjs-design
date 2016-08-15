@@ -1,0 +1,23 @@
+@mixin app-features() {
+  .features {
+    font-size: 90%;
+    .row {
+      @include breakpoint(medium) {
+        > .columns {
+          &:last-child {
+            border-left: 1px solid $light-gray;
+            margin-left: -1px;
+          }
+        }
+      }
+      @include breakpoint(small down) {
+        > .columns {
+          &:last-child {
+            border-top: 1px solid $light-gray;
+            padding-top: rem-calc(20);
+          }
+        }
+      }
+    }
+  }
+}

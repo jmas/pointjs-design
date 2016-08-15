@@ -1,0 +1,6 @@
+@mixin app-buttons() {
+  .button.transparent {
+    @include button-style(transparent, transparent, map-get($foundation-palette, primary));
+    color: inherit;
+  }
+}

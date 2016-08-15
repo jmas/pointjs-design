@@ -1,0 +1,13 @@
+@mixin app-logo() {
+  .logo {
+    @include button(false, transparent, transparent, $white, none);
+    @include button-style(transparent, transparent, $white);
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: rem-calc(20);
+    line-height: rem-calc(20);
+    &-point {
+      color: map-get($foundation-palette, success);
+    }
+  }
+}

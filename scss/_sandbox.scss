@@ -1,0 +1,75 @@
+$sandbox-height: 600;
+
+@mixin app-sandbox() {
+  .sandbox {
+    margin-bottom: $global-margin*3;
+    &-scene {
+      height: rem-calc($sandbox-height*0.75);
+    }
+    &-log {
+      height: rem-calc($sandbox-height*0.25);
+      border-top: 1px solid $medium-gray;
+      &-textarea {
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        font-family: 'Courier New';
+        font-size: 90%;
+        color: $dark-gray;
+        max-height: 100%;
+        min-height: 100%;
+        background-color: transparent;
+        resize: none;
+        box-shadow: none;
+        &:focus {
+          border: none;
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+    &-view {
+      &-column {
+        background-color: mix($body-background, $white, 50%);
+        height: rem-calc($sandbox-height);
+        border-radius: $global-radius 0 0 $global-radius;
+      }
+    }
+    &-editor {
+      &-controls {
+        padding: $global-padding;
+        height: rem-calc(72);
+        button, select {
+          margin-bottom: 0;
+        }
+      }
+      &-code {
+        border-top: 1px solid $medium-gray;
+        height: rem-calc($sandbox-height - 72);
+      }
+      &-column {
+        background-color: $white;
+        height: rem-calc($sandbox-height);
+        border-radius: 0 $global-radius $global-radius 0;
+      }
+      &-textarea {
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        font-family: 'Courier New';
+        font-size: 90%;
+        color: $black;
+        max-height: 100%;
+        min-height: 100%;
+        background-color: transparent;
+        resize: none;
+        box-shadow: none;
+        &:focus {
+          border: none;
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

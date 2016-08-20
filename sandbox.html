@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point.JS</title>
+    <link rel="stylesheet" href="css/app.css?1">
+</head>
+<body>
+
+<div class="nav">
+    <div class="row">
+        <div class="column">
+            <div class="nav-logo">
+                <a class="logo" href="#">Point <span class="logo-point">&bull;</span> JS</a>
+            </div>
+            <label class="nav-menu-button" for="nav-menu-trigger"><i class="icon icon-menu icon-l"></i></label>
+            <input class="nav-menu-trigger" id="nav-menu-trigger" type="checkbox" />
+            <div class="nav-menu">
+                <ul>
+                    <li><a class="button transparent" href="#">Скачать</a></li>
+                    <li><a class="button transparent" href="#">Примеры</a></li>
+                    <li><a class="button transparent" href="#">Документация</a></li>
+                    <li><a class="button transparent" href="#">Песочница</a></li>
+                    <li><a class="button transparent" href="#">Сообщество</a></li>
+                </ul>
+            </div>
+            <label class="nav-menu-overlay" for="nav-menu-trigger"></label>
+        </div>
+    </div>
+</div>
+
+<div class="row sandbox">
+    <div class="column">
+        <div class="row collapse">
+            <div class="medium-6 columns s-plxl s-prxl sandbox-view-column">
+                <div class="sandbox-scene"></div>
+                <div class="sandbox-log">
+                    <textarea class="sandbox-log-textarea">Для вывода сообщений в эту консоль используйте функцию log().
+Для запуска игры нажмите CTRL+ENTER или Запустить.</textarea>
+                </div>
+            </div>
+            <div class="medium-6 columns sandbox-editor-column">
+                <div class="row sandbox-editor-controls">
+                    <div class="medium-7 columns">
+                        <button class="button">Запустить</button>
+                        <button class="button hollow">Очистить</button>
+                        <button class="button hollow">Мин. код</button>
+                    </div>
+                    <div class="medium-5 columns">
+                        <select>
+                            <option>Выбрать шаблон</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sandbox-editor-code">
+                    <textarea class="sandbox-editor-textarea">// Создание движка
+var pjs = new PointJS("2d", 400, 200, {
+  backgroundColor : 'white'
+});
+
+// Ссылки на объекты для сокращения записи
+var game = pjs.game;
+var brush = pjs.brush;
+
+// Создание игрового цикла
+game.newLoop("game", function () {
+  // Очистка прошлого кадра отрисовки
+  game.clear();
+  // Отрисовка простого текста
+  brush.drawText({
+    text : "Привет, Мир!",
+    color : "blue",
+    size : 15,
+    x : 20, y : 20
+  });
+});
+
+// Назначение игрового цикла как основного
+game.setLoop("game");
+
+// Старт игрового цикла
+game.start();</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row s-mbxl">
+    <div class="column">
+        <div class="column">
+            <div class="text-center">
+                <a class="button transparent color-text" href="#">
+                    <i class="icon icon-youtube icon-m s-mrx"></i>
+                    <span>Youtube канал с уроками</span>
+                </a>
+                <a class="button transparent color-text" href="#">
+                    <i class="icon icon-github icon-m s-mrx"></i>
+                    <span>Github страница проекта</span>
+                </a>
+                <a class="button transparent color-text" href="#">
+                    <i class="icon icon-heart icon-m s-mrx"></i>
+                    <span>Помочь проекту</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.js?1"></script>
+<script src="bower_components/what-input/what-input.js?1"></script>
+<script src="bower_components/foundation-sites/dist/foundation.js?1"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

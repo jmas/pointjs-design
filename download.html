@@ -1,0 +1,232 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point.JS</title>
+    <link rel="stylesheet" href="css/app.css?1">
+</head>
+<body>
+
+<div class="nav">
+    <div class="row">
+        <div class="column">
+            <div class="nav-logo">
+                <a class="logo" href="#">Point <span class="logo-point">&bull;</span> JS</a>
+            </div>
+            <label class="nav-menu-button" for="nav-menu-trigger"><i class="icon icon-menu icon-l"></i></label>
+            <input class="nav-menu-trigger" id="nav-menu-trigger" type="checkbox" />
+            <div class="nav-menu">
+                <ul>
+                    <li class="active"><a class="button transparent" href="#">Скачать</a></li>
+                    <li><a class="button transparent" href="#">Примеры</a></li>
+                    <li><a class="button transparent" href="#">Документация</a></li>
+                    <li><a class="button transparent" href="#">Песочница</a></li>
+                    <li><a class="button transparent" href="#">Сообщество</a></li>
+                </ul>
+            </div>
+            <label class="nav-menu-overlay" for="nav-menu-trigger"></label>
+        </div>
+    </div>
+</div>
+
+<div class="row download">
+    <div class="column">
+        <div class="callout s-mbl">
+            <div class="row">
+                <div class="medium-4 columns">
+                    <h3>Версия: 0.0.5.X</h3>
+                    <p><strong>Актуальная версия</strong><br />21 августа 2016</p>
+                    <p>
+                        <a class="button" href="#">Скачать 0.0.5.7</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.6</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.5</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.4</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.3</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.2</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.1</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.5.0</a>
+                    </p>
+                </div>
+                <div class="medium-8 columns">
+                    <h5>Обновления</h5>
+                    <ul>
+                        <li>Новая функция <code>newDOM()</code>, позволяющая сразу создавать необходимые DOM элементы указав их тег;</li>
+                        <li>Добавлена возможность создавать интерфейсы пользователя посредством специального движка GUI;</li>
+                        <li>GUI поддерживает событийную модель поведения, и позволяет настроить реакцию на действия игрока;</li>
+                        <li>Добавлена функция получения скорости перемещения пальца по сенсорному экрану <code>touchControl.getSpeed()</code>;</li>
+                        <li>Добавлена возможность изменять прозрачность объектов плавно функцией transparent;</li>
+                        <li>Добавлена функция <code>initFullScale()</code>, увеличивающая канвас пропорционально размерам экрана.</li>
+                    </ul>
+                    <h5>0.0.5.7</h5>
+                    <ul>
+                        <li>Добавлен новый объект <code>GL</code> для работы с шейдерной обработкой и визуализацией эффектов;</li>
+                        <li>Все объекты контролов обзавелись новым функционалом;</li>
+                        <li>В &<code>vector</code> добавлены новые функции по созданию <code>StaticBox</code> и <code>DynamicBox</code> из переменных;</li>
+                        <li>В <code>GL</code> добавлен фильтр <code>Inversion</code> для инверсии цветов. Пока Шейдерная графика &mdash; лишь эксперимент и находится в разработке;</li>
+                        <li>Большая оптимизация графического ядра, увеличение производительности на смартфонах;</li>
+                        <li>Возможность интеграции в Intel XDK проекты.</li>
+                    </ul>
+                    <h5>Исправления</h5>
+                    <ul>
+                        <li>Исправлена работа функции <code>attachDOM()</code>, из-за сбоя в которой при НЕ загруженном до конца документа новые элементы затирали собой предыдущие;</li>
+                        <li>Исправлена команда newImageObject, которая не обрабатывала scale в некоторых случах при создании разных объектов с одинаковым изображением;</li>
+                        <li>Исправлена ошибка с отсутствующим тегом <code>style</code> при создании экземпляра PointJS из NodeJS;</li>
+                        <li>Исправлена проблема съезжающего текста при изменении размера экрана;</li>
+                        <li>Исправлена неверно работающая функция получения скорости мыши <code>mouseControl.getSpeed()</code>;</li>
+                        <li>Исправлена обработка <code>touchControl</code> на некоторых версиях Android.</li>
+                    </ul>
+                    <p><strong>ВНИМАНИЕ!</strong> В ВЕРСИИ 0.0.5.5 ОТСУТСТВУЕТ ПОДДЕРЖКА МУЛЬТИТАЧ!</p>
+                </div>
+            </div>
+        </div>
+        <div class="callout s-mbl">
+            <div class="row">
+                <div class="medium-4 columns">
+                    <h3>Версия: 0.0.4.X</h3>
+                    <p><strong>Устаревшая версия</strong><br />18 июня 2016</p>
+                    <p>
+                        <a class="button" href="#">Скачать 0.0.4.5</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.4.4</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.4.3</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.4.2</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.4.1</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.4.0</a>
+                    </p>
+                </div>
+                <div class="medium-8 columns">
+                    <h5>Обновления</h5>
+                    <ul>
+                        <li>Добавлена функция <code>draw()</code> в объект <code>Mesh</code>;</li>
+                        <li>Добавлена функция <code>setPositionS()</code> для <code>BaseObject</code>;</li>
+                        <li>В brush добавлена функция <code>drawLineS()</code>;</li>
+                        <li>Добавлен новый объект <code>BackgroudObject</code>;</li>
+                        <li>В объект <code>Mesh</code> добавлена функция <code>draw()</code> для автоотрисовки всех объектов внутри меша;</li>
+                        <li>В объекты были добавлены новые тиипизированные функции;</li>
+                        <li>Каждый объект теперь имеет свой тип, проверить который можно функцией <code>getType()</code>;</li>
+                        <li>В brush добавлены новые функции отрисовки, учитывающие координаты камеры;</li>
+                        <li>Добавлены функции для <code>BaseObject</code>;</li>
+                        <li>Большая оптимизация, учет прозрачности объекта;</li>
+                        <li>Расширение функционала <code>PointJS.OOP</code> скопа;</li>
+                        <li>Новые методы обнаружения столкновений;</li>
+                        <li>Новые методы работы с камерой, и обособление самого объекта камеры в <code>PointJS.camera.{}</code>.</li>
+                    </ul>
+                    <h5>Исправления</h5>
+                    <ul>
+                        <li>Функция <code>isInCamera()</code> дополнена двумя соответствующими функциями, сама стала универсальной: <code>isInCameraDynamic()</code> и <code>isInCameraStatic()</code>;</li>
+                        <li>Исправлено поведение курсора при захвате;</li>
+                        <li>Оптимизирована функция отрисовки заднего фона (<code>BackgroudObject.draw()</code>);</li>
+                        <li>Оптимизированы контролы <code>mouseControl</code>, <code>touchControl</code>, <code>keyControl</code> (смотрите изменения в справке);</li>
+                        <li>Функции, помеченные, как устаревшие, удалены версии;</li>
+                        <li>Исправлена работа функции <code>isInCameraDynamic()</code> у базового объекта;</li>
+                        <li>Оптимизация отрисовки полигональных объектов;</li>
+                        <li>Стабилизация камеры.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="callout s-mbl">
+            <div class="row">
+                <div class="medium-4 columns">
+                    <h3>Версия: 0.0.3.X</h3>
+                    <p><strong>Устаревшая версия</strong><br />20 мая 2016</p>
+                    <p>
+                        <a class="button" href="#">Скачать 0.0.3.7</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.6</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.5</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.4</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.3</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.2</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.1</a><br />
+                        <a class="button hollow" href="#">Скачать 0.0.3.0</a>
+                    </p>
+                </div>
+                <div class="medium-8 columns">
+                    <h5>Обновления</h5>
+                    <ul>
+                        <li>Добавлен <code>TextObject</code> &mdash; интерактивный текст, наследующий <code>BaseObject</code>;</li>
+                        <li>Добавлена возможность отслеживания загрузки ресурсов в реальном времени (картинки, аудио);</li>
+                        <li>Добавлена поддержка WEB Audio API. Пока экспериментально (поддержка iOS и Android);</li>
+                        <li>Добавлен новый пример <code>aaah.html</code> с бешеным кроликом и <code>audio_2.html</code> для проверки звука;</li>
+                        <li>Добавлена возможность управления вибрацией устройства (Android и iOS + экспериментально для других устройств).</li>
+                    </ul>
+                    <h5>Исправления</h5>
+                    <ul>
+                        <li>Убран баг с неправильно работающим выравниванием у однострочного текст (<code>brush.drawText()</code>);</li>
+                        <li>Оптимизирован вывод изображения при использовании <code>ImageObject</code>;</li>
+                        <li>Функция <code>game.createLoop()</code> помечена как устаревшая, новая функция <code>game.newLoop</code>;</li>
+                        <li>Функция <code>game.clearContext()</code> и <code>game.fillContext()</code> помечены как устаревшие. Аналоги этих функций добавлены в описание;</li>
+                        <li>Исправлена работа функции <code>drawFrame()</code>, теперь она принимает порядковый номер кадра начиная с 0;</li>
+                        <li>Исправлена функция <code>touchControl.isTouchPress()</code>, теперь она обрабатывает не только первую проверку, но и все остальные.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="callout s-mbl">
+            <div class="row">
+                <div class="medium-4 columns">
+                    <h3>Версия: 0.0.2.X</h3>
+                    <p><strong>Устаревшая версия</strong><br />14 мая 2016</p>
+                    <p>
+                        <a class="button" href="#">Скачать 0.0.2.1</a>
+                    </p>
+                </div>
+                <div class="medium-8 columns">
+                    <h5>Обновления</h5>
+                    <ul>
+                        <li>Добавлена возможность выравнивать текст при его отрисовке через <code>brush</code>;</li>
+                        <li>Добавлена возможность вызова диалоговых сообщений для ввода текста игроком;</li>
+                        <li>Добавлен пример <code>dialogs.html</code>;</li>
+                        <li>Добавлен пример <code>agar.io.html</code>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="callout s-mbl">
+            <div class="row">
+                <div class="medium-4 columns">
+                    <h3>Версия: 0.0.1.X</h3>
+                    <p><strong>Устаревшая версия</strong><br />14 мая 2016</p>
+                    <p>
+                        <a class="button" href="#">Скачать 0.0.0.1</a>
+                    </p>
+                </div>
+                <div class="medium-8 columns">
+                    <h5>Обновления</h5>
+                    <ul>
+                        <li>Стандартный функционал.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row s-mbxl">
+    <div class="column">
+        <div class="column">
+            <div class="text-center">
+                <a class="button transparent color-text" href="#">
+                    <i class="icon icon-youtube icon-m s-mrx"></i>
+                    <span>Youtube канал с уроками</span>
+                </a>
+                <a class="button transparent color-text" href="#">
+                    <i class="icon icon-github icon-m s-mrx"></i>
+                    <span>Github страница проекта</span>
+                </a>
+                <a class="button transparent color-text" href="#">
+                    <i class="icon icon-heart icon-m s-mrx"></i>
+                    <span>Помочь проекту</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.js?1"></script>
+<script src="bower_components/what-input/what-input.js?1"></script>
+<script src="bower_components/foundation-sites/dist/foundation.js?1"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

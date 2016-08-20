@@ -1,0 +1,40 @@
+@examples-item-height: 200;
+
+@mixin app-examples() {
+  .examples {
+    @include clearfix;
+    &-item {
+      border-radius: $global-radius;
+      margin-bottom: $global-margin;
+      &-image {
+        background-color: $white;
+        height: rem-calc(150);
+        overflow: hidden;
+        border-radius: $global-radius $global-radius 0 0;
+        img {
+          width: auto;
+          max-width: inherit;
+          height: 100%;
+        }
+      }
+      &-description {
+        @include clearfix;
+        background-color: mix($body-background, $white, 50%);
+        padding: $global-padding;
+        border-radius: 0 0 $global-radius $global-radius;
+        font-size: 90%;
+      }
+      &-name {
+        float: left;
+        font-weight: 700;
+      }
+      &-buttons {
+        float: right;
+        .button {
+          margin-bottom: 0;
+          font-size: 90%;
+        }
+      }
+    }
+  }
+}

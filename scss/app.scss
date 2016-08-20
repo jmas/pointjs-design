@@ -12,6 +12,7 @@
 @import 'welcome';
 @import 'icons';
 @import 'sandbox';
+@import 'examples';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -67,3 +68,4 @@
 @include app-welcome;
 @include app-icons;
 @include app-sandbox;
+@include app-examples;

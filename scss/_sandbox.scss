@@ -2,7 +2,6 @@ $sandbox-height: 600;
 
 @mixin app-sandbox() {
   .sandbox {
-    margin-bottom: $global-margin*3;
     &-scene {
       height: rem-calc($sandbox-height*0.75);
     }
